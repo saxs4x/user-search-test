@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+import React from 'react';
+import {Button} from 'antd';
 import './App.css';
+import {Input, Space} from 'antd';
+import { PageHeader } from 'antd';
+import SearchScreen from "./screens/SearchScreen";
 
-function App() {
-  return (
+
+const App = () => (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <PageHeader
+            className="site-page-header"
+            onBack={() => null}
+            backIcon={false}
+            ghost={false}
+            title="Test Search App"
+        />
+        <SearchScreen />
     </div>
-  );
-}
+);
 
 export default App;
